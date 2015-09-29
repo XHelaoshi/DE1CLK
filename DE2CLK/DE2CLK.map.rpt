@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2CLK
-Tue Sep 29 14:11:57 2015
+Tue Sep 29 22:20:54 2015
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -10,7 +10,12 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +41,20 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Tue Sep 29 14:11:57 2015             ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 29 22:20:54 2015         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; DE2CLK                                        ;
 ; Top-level Entity Name              ; clktop                                        ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; N/A until Partition Merge                     ;
-;     Total combinational functions  ; N/A until Partition Merge                     ;
-;     Dedicated logic registers      ; N/A until Partition Merge                     ;
-; Total registers                    ; N/A until Partition Merge                     ;
-; Total pins                         ; N/A until Partition Merge                     ;
-; Total virtual pins                 ; N/A until Partition Merge                     ;
-; Total memory bits                  ; N/A until Partition Merge                     ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
-; Total PLLs                         ; N/A until Partition Merge                     ;
+; Total logic elements               ; 171                                           ;
+;     Total combinational functions  ; 150                                           ;
+;     Dedicated logic registers      ; 90                                            ;
+; Total registers                    ; 90                                            ;
+; Total pins                         ; 45                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -148,13 +153,101 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+
+; clkdiv.vhd                       ; yes             ; User VHDL File               ; E:/FPGA/201309ST/lab2/step2/DE2CLK/clkdiv.vhd   ;
+; clktop.vhd                       ; yes             ; User VHDL File               ; E:/FPGA/201309ST/lab2/step2/DE2CLK/clktop.vhd   ;
+; seg.vhd                          ; yes             ; User VHDL File               ; E:/FPGA/201309ST/lab2/step2/DE2CLK/seg.vhd      ;
+; keyb.vhd                         ; yes             ; User VHDL File               ; E:/FPGA/201309ST/lab2/step2/DE2CLK/keyb.vhd     ;
+; db/gbrst.vhd                     ; yes             ; Auto-Generated Megafunction  ; E:/FPGA/201309ST/lab2/step2/DE2CLK/db/gbrst.vhd ;
+; dclk.vhd                         ; yes             ; Auto-Found VHDL File         ; E:/FPGA/201309ST/lab2/step2/DE2CLK/dclk.vhd     ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                      ;
++---------------------------------------------+------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                              ;
++---------------------------------------------+------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 171                                                                                ;
+;                                             ;                                                                                    ;
+; Total combinational functions               ; 150                                                                                ;
+; Logic element usage by number of LUT inputs ;                                                                                    ;
+;     -- 4 input functions                    ; 80                                                                                 ;
+;     -- 3 input functions                    ; 35                                                                                 ;
+;     -- <=2 input functions                  ; 35                                                                                 ;
+;                                             ;                                                                                    ;
+; Logic elements by mode                      ;                                                                                    ;
+;     -- normal mode                          ; 128                                                                                ;
+;     -- arithmetic mode                      ; 22                                                                                 ;
+;                                             ;                                                                                    ;
+; Total registers                             ; 90                                                                                 ;
+;     -- Dedicated logic registers            ; 90                                                                                 ;
+;     -- I/O registers                        ; 0                                                                                  ;
+;                                             ;                                                                                    ;
+; I/O pins                                    ; 45                                                                                 ;
+; Maximum fan-out node                        ; gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component|wire_clkctrl1_outclk ;
+; Maximum fan-out                             ; 58                                                                                 ;
+; Total fan-out                               ; 799                                                                                ;
+; Average fan-out                             ; 2.79                                                                               ;
++---------------------------------------------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++-------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Library Name ;
++-------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+; |clktop                                                     ; 150 (34)          ; 90 (18)      ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |clktop                                                               ; work         ;
+;    |clkdiv:u1|                                              ; 32 (32)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|clkdiv:u1                                                     ;              ;
+;    |dclk:u3|                                                ; 42 (42)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|dclk:u3                                                       ;              ;
+;    |gbrst:u10|                                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|gbrst:u10                                                     ;              ;
+;       |gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component ;              ;
+;    |keyb:u11|                                               ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|keyb:u11                                                      ;              ;
+;    |keyb:u2|                                                ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|keyb:u2                                                       ;              ;
+;    |seg:u4|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u4                                                        ;              ;
+;    |seg:u5|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u5                                                        ;              ;
+;    |seg:u6|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u6                                                        ;              ;
+;    |seg:u7|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u7                                                        ;              ;
++-------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; clkdiv:u1|divms[12..14]               ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 90    ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Sep 29 14:11:57 2015
+    Info: Processing started: Tue Sep 29 22:20:53 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2CLK -c DE2CLK
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file clkdiv.vhd
@@ -188,11 +281,32 @@ Info: Elaborating entity "keyb" for hierarchy "keyb:u2"
 Warning: Using design file dclk.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: dclk-behav
     Info: Found entity 1: dclk
-Error (10517): VHDL type mismatch error at dclk.vhd(86): std_logic_vector type does not match integer literal File: E:/FPGA/201309ST/lab2/step2/DE2CLK/dclk.vhd Line: 86
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 6 warnings
-    Error: Peak virtual memory: 317 megabytes
-    Error: Processing ended: Tue Sep 29 14:11:58 2015
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info: Elaborating entity "dclk" for hierarchy "dclk:u3"
+Warning (10036): Verilog HDL or VHDL warning at dclk.vhd(34): object "houoc" assigned a value but never read
+Info: Elaborating entity "seg" for hierarchy "seg:u4"
+Info: Elaborating entity "gbrst" for hierarchy "gbrst:u10"
+Info: Elaborating entity "gbrst_altclkctrl_7ji" for hierarchy "gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component"
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "templ[0]" is converted into an equivalent circuit using register "templ[0]~_emulated" and latch "templ[0]~latch"
+    Warning (13310): Register "templ[1]" is converted into an equivalent circuit using register "templ[1]~_emulated" and latch "templ[1]~latch"
+    Warning (13310): Register "templ[2]" is converted into an equivalent circuit using register "templ[2]~_emulated" and latch "templ[2]~latch"
+    Warning (13310): Register "templ[3]" is converted into an equivalent circuit using register "templ[3]~_emulated" and latch "templ[3]~latch"
+    Warning (13310): Register "temph[0]" is converted into an equivalent circuit using register "temph[0]~_emulated" and latch "temph[0]~latch"
+    Warning (13310): Register "temph[1]" is converted into an equivalent circuit using register "temph[1]~_emulated" and latch "temph[1]~latch"
+    Warning (13310): Register "temph[2]" is converted into an equivalent circuit using register "temph[2]~_emulated" and latch "temph[2]~latch"
+    Warning (13310): Register "temph[3]" is converted into an equivalent circuit using register "temph[3]~_emulated" and latch "temph[3]~latch"
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info: Register "clkdiv:u1|divms[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "clkdiv:u1|divms[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "clkdiv:u1|divms[12]" lost all its fanouts during netlist optimizations.
+Info: Implemented 217 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
+    Info: Implemented 36 output pins
+    Info: Implemented 171 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 325 megabytes
+    Info: Processing ended: Tue Sep 29 22:20:54 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

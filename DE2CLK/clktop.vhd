@@ -18,9 +18,10 @@ port (
 end clktop;
 
 architecture behav of clktop is
-signal rst,clks,clkms,ledg7n ,pressout,press_sw:std_logic;
-signal seccnthh,seccntll,mincnthh,mincntll,houcnthh,houcntll,templ,temph,templl,temphh :std_logic_vector(3 downto 0);
-signal ss : std_logic;
+signal rst,clks,clkms,ledg7n ,pressout,press_sw,press_dm:std_logic;
+signal seccnthh,seccntll,mincnthh,mincntll,houcnthh,houcntll,daycntll,daycnthh,moncntll,moncnthh,templ,temph,templl,temphh :std_logic_vector(3 downto 0);
+signal ss,ssdm : std_logic;
+signal ledgg: std_logic ;  
 component clkdiv is
 port (
 	clk   : in std_logic;
@@ -46,7 +47,12 @@ port (
 	mincnthh : out std_logic_vector(3 downto 0);
 	mincntll : out std_logic_vector(3 downto 0);
 	houcnthh : out std_logic_vector(3 downto 0);
-	houcntll : out std_logic_vector(3 downto 0)
+	houcntll : out std_logic_vector(3 downto 0);
+	daycnthh : out std_logic_vector(3 downto 0);
+	daycntll : out std_logic_vector(3 downto 0);
+	moncnthh : out std_logic_vector(3 downto 0);
+	moncntll : out std_logic_vector(3 downto 0);
+	LEDG: out std_logic    --press state
      );
 end component;
 component keyb is
@@ -74,7 +80,7 @@ end component;
 begin
 u1: clkdiv port map(clock_50,clkms,clks);
 u2:keyb port map(clock_50,clkms,key(0),pressout);
-u3: dclk port map(rst,clks,seccnthh,seccntll,mincnthh,mincntll,houcnthh,houcntll);
+u3: dclk port map(rst,clks,seccnthh,seccntll,mincnthh,mincntll,houcnthh,houcntll,daycnthh,daycntll,moncnthh,moncntll,ledgg);
 u4: seg port map(templl,hex0);
 u5: seg port map(temphh,hex1);
 u6: seg port map(templ,hex2);
@@ -85,6 +91,7 @@ u7: seg port map(temph,hex3);
 --u9: seg port map(houcnthh,hex5);
 u10: gbrst port map (pressout,rst);
 u11:keyb port map(clock_50,clkms,key(1),press_sw);
+u12:keyb port map(clock_50,clkms,key(2),press_dm);
 
 process(press_sw)
 begin
@@ -93,29 +100,45 @@ if press_sw'event and press_sw = '0'then
 end if;
 end process;
 
+process(press_dm)
+begin
+if press_dm'event and press_dm = '0'then
+	ssdm <=not ssdm;
+end if;
+end process;
+
 process(clkms)
 begin
 if rst = '0'then
 	templ <= mincntll;
 	temph <= mincnthh ;
+	templl <= seccntll;
+	temphh <= seccnthh;
 elsif clkms'event and clkms = '1' then
-	case ss is
-		when '1' =>
-			templ <= houcntll;
-			temph <= houcnthh ;	
-			templl <= mincntll;
-			temphh <= mincnthh;	
-		when '0' =>
-			templ <= mincntll;
-			temph <= mincnthh ;
-			templl <= seccntll;
-			temphh <= seccnthh;
-		when others =>
-			templ <= mincntll;
-			temph <= mincnthh ;
-			templl <= seccntll;
-			temphh <= seccnthh;
-	end case;	
+	if ssdm = '0' then
+		case ss is
+			when '1' =>
+				templ <= houcntll;
+				temph <= houcnthh ;	
+				templl <= mincntll;
+				temphh <= mincnthh;	
+			when '0' =>
+				templ <= mincntll;
+				temph <= mincnthh ;
+				templl <= seccntll;
+				temphh <= seccnthh;
+			when others =>
+				templ <= mincntll;
+				temph <= mincnthh ;
+				templl <= seccntll;
+				temphh <= seccnthh;
+		end case;	
+	else
+		templ <= moncntll;
+		temph <= moncnthh ;
+		templl <= daycntll;
+		temphh <= daycnthh;
+	end if;
 end if;
 end process;
 
@@ -137,5 +160,6 @@ begin
 	end if;
 end process;
 LEDG(0) <= LEDG7N;
-LEDG(7 downto 1) <= key(7 downto 1);
+LEDG(7) <= ledgg;
+LEDG(6 downto 1) <= key(6 downto 1);
 end behav;

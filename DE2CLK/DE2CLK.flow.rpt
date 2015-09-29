@@ -1,5 +1,5 @@
 Flow report for DE2CLK
-Tue Sep 29 22:20:59 2015
+Wed Sep 30 00:24:26 2015
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep 29 22:20:59 2015         ;
+; Flow Status                        ; Successful - Wed Sep 30 00:24:26 2015         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; DE2CLK                                        ;
 ; Top-level Entity Name              ; clktop                                        ;
 ; Family                             ; Cyclone II                                    ;
 ; Device                             ; EP2C20F484C7                                  ;
 ; Timing Models                      ; Final                                         ;
-; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 164 / 18,752 ( < 1 % )                        ;
-;     Total combinational functions  ; 150 / 18,752 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 90 / 18,752 ( < 1 % )                         ;
-; Total registers                    ; 90                                            ;
+; Met timing requirements            ; No                                            ;
+; Total logic elements               ; 256 / 18,752 ( 1 % )                          ;
+;     Total combinational functions  ; 228 / 18,752 ( 1 % )                          ;
+;     Dedicated logic registers      ; 117 / 18,752 ( < 1 % )                        ;
+; Total registers                    ; 117                                           ;
 ; Total pins                         ; 45 / 315 ( 14 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                           ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/29/2015 22:20:53 ;
+; Start date & time ; 09/30/2015 00:24:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE2CLK              ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------+----------------------------------------------+---------------+-------------+------------+
 ; Assignment Name        ; Value                                        ; Default Value ; Entity Name ; Section Id ;
 +------------------------+----------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID  ; 119236241108181.144353645307492              ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID  ; 119236241108181.144354386001444              ; --            ; --          ; --         ;
 ; IP_TOOL_NAME           ; ALTCLKCTRL                                   ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION        ; 9.1                                          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP ; 85                                           ; --            ; --          ; --         ;
@@ -93,11 +93,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 325 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:02     ; 1.0                     ; 373 MB              ; 00:00:03                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 325 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:02     ; 1.0                     ; 374 MB              ; 00:00:03                           ;
 ; Assembler               ; 00:00:00     ; 1.0                     ; 275 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 216 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:03     ; --                      ; --                  ; 00:00:05                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 217 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:03     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

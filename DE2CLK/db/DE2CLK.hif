@@ -46,7 +46,6 @@ ON
 # hierarchies {
 keyb:u2
 keyb:u11
-keyb:u12
 }
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -177,39 +176,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-clkdiv
-# storage
-db|DE2CLK.(1).cnf
-db|DE2CLK.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-clkdiv.vhd
-a8ed4fe0fffa8dc65debfc1cf8839c6
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-clkdiv:u1
-}
-# lmf
-d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 clktop
 # storage
 db|DE2CLK.(0).cnf
@@ -221,7 +187,7 @@ ON
 # case_insensitive
 # source_file
 clktop.vhd
-a7894f3de186014ac22c676d848799
+5baf08c2a6797f7d9ed9b89bf2e19
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -254,7 +220,7 @@ ON
 # case_insensitive
 # source_file
 dclk.vhd
-64a352e86bb94eab0f249862b82dd44
+ced7a6eceb22839a597e84f2f558c
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -291,25 +257,42 @@ USR
 3 downto 0
 PARAMETER_STRING
 USR
- constraint(daycnthh)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(daycntll)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(moncnthh)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(moncntll)
-3 downto 0
-PARAMETER_STRING
-USR
 }
 # hierarchies {
 dclk:u3
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+clkdiv
+# storage
+db|DE2CLK.(1).cnf
+db|DE2CLK.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clkdiv.vhd
+94dc625a7fcd9c2e30303c5af11edaea
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+clkdiv:u1
 }
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf

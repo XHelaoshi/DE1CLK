@@ -22,7 +22,7 @@ begin
 	process(clk)
 	begin
 	if clk'event and clk = '1' then
-		if divms(11 downto 0) = B"1" then--14,3,110000110101
+		if divms(11 downto 0) = B"11010" then--14,3,110000110101
 			divms <= (others => '0');
 		else
 			divms <= divms +1;
@@ -33,7 +33,7 @@ begin
 	process(clk)
 	begin
 	if clk'event and clk = '1' then
-		if divms(11 downto 0) = B"1" then--14,3,110000110101
+		if divms(11 downto 0) = B"11010" then--14,3,110000110101
 			clkms_s <= '1';
 		else
 			clkms_s <= '0';
@@ -52,7 +52,7 @@ begin
 	begin
 	if clk'event and clk = '1' then
 		if clkms_s = '1' then
-			if divs(8 downto 2) = B"1111" then--1111101
+			if divs(8 downto 2) = B"1111101" then
 				divs <= (others => '0');
 			else
 				divs <= divs +1;
@@ -65,7 +65,7 @@ begin
 	begin
 	if clk'event and clk = '1' then
 		if clkms_s = '1' then
-			if divs(8 downto 2) = B"1111" then--1111101
+			if divs(8 downto 2) = B"1111101" then
 				clks <= '1';
 			else
 				clks <= '0';

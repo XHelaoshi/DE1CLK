@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2CLK
-Wed Sep 30 00:24:21 2015
+Tue Sep 29 22:20:54 2015
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -14,11 +14,8 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +41,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 30 00:24:21 2015         ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 29 22:20:54 2015         ;
 ; Quartus II 64-Bit Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                      ; DE2CLK                                        ;
 ; Top-level Entity Name              ; clktop                                        ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 259                                           ;
-;     Total combinational functions  ; 228                                           ;
-;     Dedicated logic registers      ; 117                                           ;
-; Total registers                    ; 117                                           ;
+; Total logic elements               ; 171                                           ;
+;     Total combinational functions  ; 150                                           ;
+;     Dedicated logic registers      ; 90                                            ;
+; Total registers                    ; 90                                            ;
 ; Total pins                         ; 45                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -175,27 +172,27 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                              ;
 +---------------------------------------------+------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 259                                                                                ;
+; Estimated Total logic elements              ; 171                                                                                ;
 ;                                             ;                                                                                    ;
-; Total combinational functions               ; 228                                                                                ;
+; Total combinational functions               ; 150                                                                                ;
 ; Logic element usage by number of LUT inputs ;                                                                                    ;
-;     -- 4 input functions                    ; 123                                                                                ;
-;     -- 3 input functions                    ; 61                                                                                 ;
-;     -- <=2 input functions                  ; 44                                                                                 ;
+;     -- 4 input functions                    ; 80                                                                                 ;
+;     -- 3 input functions                    ; 35                                                                                 ;
+;     -- <=2 input functions                  ; 35                                                                                 ;
 ;                                             ;                                                                                    ;
 ; Logic elements by mode                      ;                                                                                    ;
-;     -- normal mode                          ; 206                                                                                ;
+;     -- normal mode                          ; 128                                                                                ;
 ;     -- arithmetic mode                      ; 22                                                                                 ;
 ;                                             ;                                                                                    ;
-; Total registers                             ; 117                                                                                ;
-;     -- Dedicated logic registers            ; 117                                                                                ;
+; Total registers                             ; 90                                                                                 ;
+;     -- Dedicated logic registers            ; 90                                                                                 ;
 ;     -- I/O registers                        ; 0                                                                                  ;
 ;                                             ;                                                                                    ;
 ; I/O pins                                    ; 45                                                                                 ;
 ; Maximum fan-out node                        ; gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component|wire_clkctrl1_outclk ;
-; Maximum fan-out                             ; 89                                                                                 ;
-; Total fan-out                               ; 1156                                                                               ;
-; Average fan-out                             ; 2.96                                                                               ;
+; Maximum fan-out                             ; 58                                                                                 ;
+; Total fan-out                               ; 799                                                                                ;
+; Average fan-out                             ; 2.79                                                                               ;
 +---------------------------------------------+------------------------------------------------------------------------------------+
 
 
@@ -204,13 +201,12 @@ applicable agreement for further details.
 +-------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Library Name ;
 +-------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------+--------------+
-; |clktop                                                     ; 228 (70)          ; 117 (19)     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |clktop                                                               ; work         ;
-;    |clkdiv:u1|                                              ; 29 (29)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|clkdiv:u1                                                     ;              ;
-;    |dclk:u3|                                                ; 80 (80)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|dclk:u3                                                       ;              ;
+; |clktop                                                     ; 150 (34)          ; 90 (18)      ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |clktop                                                               ; work         ;
+;    |clkdiv:u1|                                              ; 32 (32)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|clkdiv:u1                                                     ;              ;
+;    |dclk:u3|                                                ; 42 (42)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|dclk:u3                                                       ;              ;
 ;    |gbrst:u10|                                              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|gbrst:u10                                                     ;              ;
 ;       |gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component ;              ;
 ;    |keyb:u11|                                               ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|keyb:u11                                                      ;              ;
-;    |keyb:u12|                                               ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|keyb:u12                                                      ;              ;
 ;    |keyb:u2|                                                ; 7 (7)             ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|keyb:u2                                                       ;              ;
 ;    |seg:u4|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u4                                                        ;              ;
 ;    |seg:u5|                                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clktop|seg:u5                                                        ;              ;
@@ -220,28 +216,14 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; dclk:u3|ss[1..2]                      ; Stuck at GND due to stuck port data_in ;
-; dclk:u3|ssr                           ; Stuck at GND due to stuck port data_in ;
-; dclk:u3|moncnth[1..2]                 ; Merged with dclk:u3|moncnth[3]         ;
-; dclk:u3|moncnth[3]                    ; Stuck at GND due to stuck port data_in ;
-; clkdiv:u1|divms[12..14]               ; Lost fanout                            ;
-; Total Number of Removed Registers = 9 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+---------------+---------------------------+----------------------------------------+
-; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------+---------------------------+----------------------------------------+
-; dclk:u3|ss[2] ; Stuck at GND              ; dclk:u3|moncnth[3]                     ;
-;               ; due to stuck port data_in ;                                        ;
-+---------------+---------------------------+----------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; clkdiv:u1|divms[12..14]               ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -249,38 +231,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 117   ;
+; Total registers                              ; 90    ;
 ; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 57    ;
+; Number of registers using Asynchronous Clear ; 34    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 68    ;
+; Number of registers using Clock Enable       ; 54    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; dclk:u3|daycntl[0]                     ; 10      ;
-; dclk:u3|moncntl[0]                     ; 8       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |clktop|dclk:u3|daycnth[2] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |clktop|dclk:u3|daycntl[1] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |clktop|dclk:u3|moncnth[0] ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |clktop|dclk:u3|moncntl[1] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |clktop|temphh[3]          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -289,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Wed Sep 30 00:24:20 2015
+    Info: Processing started: Tue Sep 29 22:20:53 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2CLK -c DE2CLK
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 2 design units, including 1 entities, in source file clkdiv.vhd
@@ -315,35 +273,20 @@ Info: Found 4 design units, including 2 entities, in source file db/gbrst.vhd
     Info: Found entity 1: gbrst_altclkctrl_7ji
     Info: Found entity 2: gbrst
 Info: Elaborating entity "clktop" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at clktop.vhd(112): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at clktop.vhd(113): signal "mincntll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at clktop.vhd(114): signal "mincnthh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at clktop.vhd(115): signal "seccntll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at clktop.vhd(116): signal "seccnthh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clktop.vhd(98): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clktop.vhd(99): signal "mincntll" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at clktop.vhd(100): signal "mincnthh" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Elaborating entity "clkdiv" for hierarchy "clkdiv:u1"
 Info: Elaborating entity "keyb" for hierarchy "keyb:u2"
 Warning: Using design file dclk.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: dclk-behav
     Info: Found entity 1: dclk
 Info: Elaborating entity "dclk" for hierarchy "dclk:u3"
-Warning (10541): VHDL Signal Declaration warning at dclk.vhd(39): used implicit default value for signal "yearcnt0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at dclk.vhd(39): used implicit default value for signal "yearcnt1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at dclk.vhd(39): used implicit default value for signal "yearcnt2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at dclk.vhd(40): object "monoc" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at dclk.vhd(34): object "houoc" assigned a value but never read
 Info: Elaborating entity "seg" for hierarchy "seg:u4"
 Info: Elaborating entity "gbrst" for hierarchy "gbrst:u10"
 Info: Elaborating entity "gbrst_altclkctrl_7ji" for hierarchy "gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component"
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "templl[0]" is converted into an equivalent circuit using register "templl[0]~_emulated" and latch "templl[0]~latch"
-    Warning (13310): Register "templl[1]" is converted into an equivalent circuit using register "templl[1]~_emulated" and latch "templl[1]~latch"
-    Warning (13310): Register "templl[2]" is converted into an equivalent circuit using register "templl[2]~_emulated" and latch "templl[2]~latch"
-    Warning (13310): Register "templl[3]" is converted into an equivalent circuit using register "templl[3]~_emulated" and latch "templl[3]~latch"
-    Warning (13310): Register "temphh[0]" is converted into an equivalent circuit using register "temphh[0]~_emulated" and latch "temphh[0]~latch"
-    Warning (13310): Register "temphh[1]" is converted into an equivalent circuit using register "temphh[1]~_emulated" and latch "temphh[1]~latch"
-    Warning (13310): Register "temphh[2]" is converted into an equivalent circuit using register "temphh[2]~_emulated" and latch "temphh[2]~latch"
-    Warning (13310): Register "temphh[3]" is converted into an equivalent circuit using register "temphh[3]~_emulated" and latch "temphh[3]~latch"
     Warning (13310): Register "templ[0]" is converted into an equivalent circuit using register "templ[0]~_emulated" and latch "templ[0]~latch"
     Warning (13310): Register "templ[1]" is converted into an equivalent circuit using register "templ[1]~_emulated" and latch "templ[1]~latch"
     Warning (13310): Register "templ[2]" is converted into an equivalent circuit using register "templ[2]~_emulated" and latch "templ[2]~latch"
@@ -352,21 +295,17 @@ Warning: Presettable and clearable registers converted to equivalent circuits wi
     Warning (13310): Register "temph[1]" is converted into an equivalent circuit using register "temph[1]~_emulated" and latch "temph[1]~latch"
     Warning (13310): Register "temph[2]" is converted into an equivalent circuit using register "temph[2]~_emulated" and latch "temph[2]~latch"
     Warning (13310): Register "temph[3]" is converted into an equivalent circuit using register "temph[3]~_emulated" and latch "temph[3]~latch"
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[7]" is stuck at GND
 Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
     Info: Register "clkdiv:u1|divms[14]" lost all its fanouts during netlist optimizations.
     Info: Register "clkdiv:u1|divms[13]" lost all its fanouts during netlist optimizations.
     Info: Register "clkdiv:u1|divms[12]" lost all its fanouts during netlist optimizations.
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[7]"
-Info: Implemented 306 device resources after synthesis - the final resource count might be different
+Info: Implemented 217 device resources after synthesis - the final resource count might be different
     Info: Implemented 9 input pins
     Info: Implemented 36 output pins
-    Info: Implemented 260 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Implemented 171 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 325 megabytes
-    Info: Processing ended: Wed Sep 30 00:24:21 2015
+    Info: Processing ended: Tue Sep 29 22:20:54 2015
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

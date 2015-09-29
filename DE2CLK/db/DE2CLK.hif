@@ -45,66 +45,6 @@ ON
 }
 # hierarchies {
 keyb:u2
-keyb:u11
-}
-# lmf
-d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-dclk
-# storage
-db|DE2CLK.(3).cnf
-db|DE2CLK.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-dclk.vhd
-ac9dbb2cc7889d7512da3e429bb78d82
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(seccnthh)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(seccntll)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(mincnthh)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(mincntll)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(houcnthh)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(houcntll)
-3 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-dclk:u3
 }
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -146,12 +86,6 @@ USR
 PARAMETER_STRING
 USR
 }
-# hierarchies {
-seg:u4
-seg:u5
-seg:u6
-seg:u7
-}
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
@@ -181,9 +115,6 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
-}
-# hierarchies {
-gbrst:u10
 }
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -224,9 +155,6 @@ USR
 3 downto 0
 PARAMETER_STRING
 USR
-}
-# hierarchies {
-gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component
 }
 # lmf
 d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf

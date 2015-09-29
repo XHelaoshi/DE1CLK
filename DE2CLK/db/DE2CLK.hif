@@ -1,0 +1,304 @@
+Quartus II 64-Bit
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+keyb
+# storage
+db|DE2CLK.(2).cnf
+db|DE2CLK.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+keyb.vhd
+7c432ac916e0add8b8b828af2d161b96
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+keyb:u2
+keyb:u11
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+dclk
+# storage
+db|DE2CLK.(3).cnf
+db|DE2CLK.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+dclk.vhd
+ac9dbb2cc7889d7512da3e429bb78d82
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(seccnthh)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(seccntll)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(mincnthh)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(mincntll)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(houcnthh)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(houcntll)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+dclk:u3
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+seg
+# storage
+db|DE2CLK.(4).cnf
+db|DE2CLK.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+seg.vhd
+82f86b7888ab7c4a141055e81280e659
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(hex)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+seg:u4
+seg:u5
+seg:u6
+seg:u7
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+gbrst
+# storage
+db|DE2CLK.(5).cnf
+db|DE2CLK.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+db|gbrst.vhd
+6f4c2f8ab23b1c901ce1f2e38b34f8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+gbrst:u10
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+gbrst_altclkctrl_7ji
+# storage
+db|DE2CLK.(6).cnf
+db|DE2CLK.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+db|gbrst.vhd
+6f4c2f8ab23b1c901ce1f2e38b34f8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(clkselect)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(inclk)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+gbrst:u10|gbrst_altclkctrl_7ji:gbrst_altclkctrl_7ji_component
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+clktop
+# storage
+db|DE2CLK.(0).cnf
+db|DE2CLK.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clktop.vhd
+5baf08c2a6797f7d9ed9b89bf2e19
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+clkdiv
+# storage
+db|DE2CLK.(1).cnf
+db|DE2CLK.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+clkdiv.vhd
+66cb4f785cb91253aec58dafb36c69bf
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+clkdiv:u1
+}
+# lmf
+d:|programfiles|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

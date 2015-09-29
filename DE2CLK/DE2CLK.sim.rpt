@@ -1,0 +1,285 @@
+Simulator report for DE2CLK
+Tue Mar 06 21:08:25 2012
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.5 ms       ;
+; Simulation Netlist Size     ; 98 nodes     ;
+; Simulation Coverage         ;      74.49 % ;
+; Total Number of Transitions ; 1312432      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; DE2CLK.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      74.49 % ;
+; Total nodes checked                                 ; 98           ;
+; Total output ports checked                          ; 98           ;
+; Total output ports with complete 1/0-value coverage ; 73           ;
+; Total output ports with no 1/0-value coverage       ; 24           ;
+; Total output ports with no 1-value coverage         ; 24           ;
+; Total output ports with no 0-value coverage         ; 25           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |clkdiv|divms~0    ; |clkdiv|divms~0    ; out              ;
+; |clkdiv|divms~1    ; |clkdiv|divms~1    ; out              ;
+; |clkdiv|divms~2    ; |clkdiv|divms~2    ; out              ;
+; |clkdiv|divms~3    ; |clkdiv|divms~3    ; out              ;
+; |clkdiv|divms~4    ; |clkdiv|divms~4    ; out              ;
+; |clkdiv|divms~5    ; |clkdiv|divms~5    ; out              ;
+; |clkdiv|divms~6    ; |clkdiv|divms~6    ; out              ;
+; |clkdiv|divms~7    ; |clkdiv|divms~7    ; out              ;
+; |clkdiv|divms~8    ; |clkdiv|divms~8    ; out              ;
+; |clkdiv|divms~9    ; |clkdiv|divms~9    ; out              ;
+; |clkdiv|divms~10   ; |clkdiv|divms~10   ; out              ;
+; |clkdiv|divms~11   ; |clkdiv|divms~11   ; out              ;
+; |clkdiv|divms~12   ; |clkdiv|divms~12   ; out              ;
+; |clkdiv|divms~13   ; |clkdiv|divms~13   ; out              ;
+; |clkdiv|divms~14   ; |clkdiv|divms~14   ; out              ;
+; |clkdiv|divms[0]   ; |clkdiv|divms[0]   ; regout           ;
+; |clkdiv|clkms_s    ; |clkdiv|clkms_s    ; regout           ;
+; |clkdiv|divs[1]    ; |clkdiv|divs[1]    ; regout           ;
+; |clkdiv|divs~5     ; |clkdiv|divs~5     ; out              ;
+; |clkdiv|divs~6     ; |clkdiv|divs~6     ; out              ;
+; |clkdiv|divs~7     ; |clkdiv|divs~7     ; out              ;
+; |clkdiv|divs~8     ; |clkdiv|divs~8     ; out              ;
+; |clkdiv|clkms~reg0 ; |clkdiv|clkms~reg0 ; regout           ;
+; |clkdiv|divs[0]    ; |clkdiv|divs[0]    ; regout           ;
+; |clkdiv|divms[1]   ; |clkdiv|divms[1]   ; regout           ;
+; |clkdiv|divms[2]   ; |clkdiv|divms[2]   ; regout           ;
+; |clkdiv|divms[3]   ; |clkdiv|divms[3]   ; regout           ;
+; |clkdiv|divms[4]   ; |clkdiv|divms[4]   ; regout           ;
+; |clkdiv|divms[5]   ; |clkdiv|divms[5]   ; regout           ;
+; |clkdiv|divms[6]   ; |clkdiv|divms[6]   ; regout           ;
+; |clkdiv|divms[7]   ; |clkdiv|divms[7]   ; regout           ;
+; |clkdiv|divms[8]   ; |clkdiv|divms[8]   ; regout           ;
+; |clkdiv|divms[9]   ; |clkdiv|divms[9]   ; regout           ;
+; |clkdiv|divms[10]  ; |clkdiv|divms[10]  ; regout           ;
+; |clkdiv|divms[11]  ; |clkdiv|divms[11]  ; regout           ;
+; |clkdiv|divms[12]  ; |clkdiv|divms[12]  ; regout           ;
+; |clkdiv|divms[13]  ; |clkdiv|divms[13]  ; regout           ;
+; |clkdiv|divms[14]  ; |clkdiv|divms[14]  ; regout           ;
+; |clkdiv|clk        ; |clkdiv|clk        ; out              ;
+; |clkdiv|clkms      ; |clkdiv|clkms      ; pin_out          ;
+; |clkdiv|Add0~0     ; |clkdiv|Add0~0     ; out0             ;
+; |clkdiv|Add0~1     ; |clkdiv|Add0~1     ; out0             ;
+; |clkdiv|Add0~2     ; |clkdiv|Add0~2     ; out0             ;
+; |clkdiv|Add0~3     ; |clkdiv|Add0~3     ; out0             ;
+; |clkdiv|Add0~4     ; |clkdiv|Add0~4     ; out0             ;
+; |clkdiv|Add0~5     ; |clkdiv|Add0~5     ; out0             ;
+; |clkdiv|Add0~6     ; |clkdiv|Add0~6     ; out0             ;
+; |clkdiv|Add0~7     ; |clkdiv|Add0~7     ; out0             ;
+; |clkdiv|Add0~8     ; |clkdiv|Add0~8     ; out0             ;
+; |clkdiv|Add0~9     ; |clkdiv|Add0~9     ; out0             ;
+; |clkdiv|Add0~10    ; |clkdiv|Add0~10    ; out0             ;
+; |clkdiv|Add0~11    ; |clkdiv|Add0~11    ; out0             ;
+; |clkdiv|Add0~12    ; |clkdiv|Add0~12    ; out0             ;
+; |clkdiv|Add0~13    ; |clkdiv|Add0~13    ; out0             ;
+; |clkdiv|Add0~14    ; |clkdiv|Add0~14    ; out0             ;
+; |clkdiv|Add0~15    ; |clkdiv|Add0~15    ; out0             ;
+; |clkdiv|Add0~16    ; |clkdiv|Add0~16    ; out0             ;
+; |clkdiv|Add0~17    ; |clkdiv|Add0~17    ; out0             ;
+; |clkdiv|Add0~18    ; |clkdiv|Add0~18    ; out0             ;
+; |clkdiv|Add0~19    ; |clkdiv|Add0~19    ; out0             ;
+; |clkdiv|Add0~20    ; |clkdiv|Add0~20    ; out0             ;
+; |clkdiv|Add0~21    ; |clkdiv|Add0~21    ; out0             ;
+; |clkdiv|Add0~22    ; |clkdiv|Add0~22    ; out0             ;
+; |clkdiv|Add0~23    ; |clkdiv|Add0~23    ; out0             ;
+; |clkdiv|Add0~24    ; |clkdiv|Add0~24    ; out0             ;
+; |clkdiv|Add0~25    ; |clkdiv|Add0~25    ; out0             ;
+; |clkdiv|Add0~26    ; |clkdiv|Add0~26    ; out0             ;
+; |clkdiv|Add1~0     ; |clkdiv|Add1~0     ; out0             ;
+; |clkdiv|Add1~1     ; |clkdiv|Add1~1     ; out0             ;
+; |clkdiv|Add1~2     ; |clkdiv|Add1~2     ; out0             ;
+; |clkdiv|Add1~3     ; |clkdiv|Add1~3     ; out0             ;
+; |clkdiv|Add1~4     ; |clkdiv|Add1~4     ; out0             ;
+; |clkdiv|Equal0~0   ; |clkdiv|Equal0~0   ; out0             ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |clkdiv|divs[5]   ; |clkdiv|divs[5]   ; regout           ;
+; |clkdiv|divs[4]   ; |clkdiv|divs[4]   ; regout           ;
+; |clkdiv|divs[3]   ; |clkdiv|divs[3]   ; regout           ;
+; |clkdiv|divs~0    ; |clkdiv|divs~0    ; out              ;
+; |clkdiv|divs~1    ; |clkdiv|divs~1    ; out              ;
+; |clkdiv|divs~2    ; |clkdiv|divs~2    ; out              ;
+; |clkdiv|divs~3    ; |clkdiv|divs~3    ; out              ;
+; |clkdiv|divs~4    ; |clkdiv|divs~4    ; out              ;
+; |clkdiv|clks~reg0 ; |clkdiv|clks~reg0 ; regout           ;
+; |clkdiv|divs[6]   ; |clkdiv|divs[6]   ; regout           ;
+; |clkdiv|divs[7]   ; |clkdiv|divs[7]   ; regout           ;
+; |clkdiv|divs[8]   ; |clkdiv|divs[8]   ; regout           ;
+; |clkdiv|clks      ; |clkdiv|clks      ; pin_out          ;
+; |clkdiv|Add1~5    ; |clkdiv|Add1~5    ; out0             ;
+; |clkdiv|Add1~6    ; |clkdiv|Add1~6    ; out0             ;
+; |clkdiv|Add1~7    ; |clkdiv|Add1~7    ; out0             ;
+; |clkdiv|Add1~8    ; |clkdiv|Add1~8    ; out0             ;
+; |clkdiv|Add1~9    ; |clkdiv|Add1~9    ; out0             ;
+; |clkdiv|Add1~10   ; |clkdiv|Add1~10   ; out0             ;
+; |clkdiv|Add1~11   ; |clkdiv|Add1~11   ; out0             ;
+; |clkdiv|Add1~12   ; |clkdiv|Add1~12   ; out0             ;
+; |clkdiv|Add1~13   ; |clkdiv|Add1~13   ; out0             ;
+; |clkdiv|Add1~14   ; |clkdiv|Add1~14   ; out0             ;
+; |clkdiv|Equal1~0  ; |clkdiv|Equal1~0  ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------+
+; Missing 0-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |clkdiv|divs[5]   ; |clkdiv|divs[5]   ; regout           ;
+; |clkdiv|divs[4]   ; |clkdiv|divs[4]   ; regout           ;
+; |clkdiv|divs[3]   ; |clkdiv|divs[3]   ; regout           ;
+; |clkdiv|divs[2]   ; |clkdiv|divs[2]   ; regout           ;
+; |clkdiv|divs~0    ; |clkdiv|divs~0    ; out              ;
+; |clkdiv|divs~1    ; |clkdiv|divs~1    ; out              ;
+; |clkdiv|divs~2    ; |clkdiv|divs~2    ; out              ;
+; |clkdiv|divs~3    ; |clkdiv|divs~3    ; out              ;
+; |clkdiv|divs~4    ; |clkdiv|divs~4    ; out              ;
+; |clkdiv|clks~reg0 ; |clkdiv|clks~reg0 ; regout           ;
+; |clkdiv|divs[6]   ; |clkdiv|divs[6]   ; regout           ;
+; |clkdiv|divs[7]   ; |clkdiv|divs[7]   ; regout           ;
+; |clkdiv|divs[8]   ; |clkdiv|divs[8]   ; regout           ;
+; |clkdiv|clks      ; |clkdiv|clks      ; pin_out          ;
+; |clkdiv|Add1~5    ; |clkdiv|Add1~5    ; out0             ;
+; |clkdiv|Add1~6    ; |clkdiv|Add1~6    ; out0             ;
+; |clkdiv|Add1~7    ; |clkdiv|Add1~7    ; out0             ;
+; |clkdiv|Add1~8    ; |clkdiv|Add1~8    ; out0             ;
+; |clkdiv|Add1~9    ; |clkdiv|Add1~9    ; out0             ;
+; |clkdiv|Add1~10   ; |clkdiv|Add1~10   ; out0             ;
+; |clkdiv|Add1~11   ; |clkdiv|Add1~11   ; out0             ;
+; |clkdiv|Add1~12   ; |clkdiv|Add1~12   ; out0             ;
+; |clkdiv|Add1~13   ; |clkdiv|Add1~13   ; out0             ;
+; |clkdiv|Add1~14   ; |clkdiv|Add1~14   ; out0             ;
+; |clkdiv|Equal1~0  ; |clkdiv|Equal1~0  ; out0             ;
++-------------------+-------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Tue Mar 06 21:08:10 2012
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off DE2CLK -c DE2CLK
+Info: Using vector source file "D:/fpgawork/teacher/DE2CLK/DE2CLK/DE2CLK.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      74.49 %
+Info: Number of transitions in simulation is 1312432
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 111 megabytes
+    Info: Processing ended: Tue Mar 06 21:08:26 2012
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:16
+
+
